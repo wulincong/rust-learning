@@ -8,8 +8,8 @@ fn main() {
     let mut conn = pool.get_conn().unwrap(); //获取链接
     conn.query_iter("select * from student").unwrap()
         .for_each(|row|{
-            let r:(i32, String, i32, String, NaiveDate) = from_row(row.unwrap());
-            println!("{}, {}, {}, {:?}", r.0, r.1, r.2, r.3);
+            // let r:(i32, String, i32, String, NaiveDate) = from_row(row.unwrap());
+            // println!("{}, {}, {}, {:?}", r.0, r.1, r.2, r.3);
         });
 }
 
